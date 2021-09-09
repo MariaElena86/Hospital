@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Select this path: http://127.0.0.1:8000/admin to use model management </p>
+
+<form action="{% url 'match' %}" method="post">
+    {% csrf_token %}
+    <div>
+        <h3>
+            <br/>
+            <label for="html">Select the Patient</label><br>
+            {{ form }}
+            <button type="submit">Find Doctor</button>
+        </h3>
+    </div>
+
+    <br/>
+    {% block selectedblock %}
+    {% endblock %}
+</form>
+</body>
+</html>

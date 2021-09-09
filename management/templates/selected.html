@@ -1,0 +1,17 @@
+{% extends "match.html" %}
+
+{% block selectedblock %}
+<p>Doctor Selected</p>
+    <form action="{% url 'match' %}" method="post">
+    {% csrf_token %}
+    <div>
+        <h2>
+            <label for="html">Doctor selected</label><br>
+            {{ form }}
+        </h2>
+    </div>
+    <br/>
+</form>
+{% endblock %}
+
+
